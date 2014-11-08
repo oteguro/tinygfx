@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="ソース ファイル\DDSTextureLoader">
+      <UniqueIdentifier>{968e65ed-0f9f-411b-959f-3304b35b1f7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -21,10 +24,16 @@
     <ClCompile Include="..\tinygfxlib.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
+    <ClCompile Include="..\DirectXTex\DDSTextureLoader\DDSTextureLoader.cpp">
+      <Filter>ソース ファイル\DDSTextureLoader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\tinygfxlib.h">
       <Filter>ヘッダー ファイル</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DirectXTex\DDSTextureLoader\DDSTextureLoader.h">
+      <Filter>ソース ファイル\DDSTextureLoader</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
