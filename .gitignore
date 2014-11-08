@@ -1,0 +1,8 @@
+*.tlog
+*.lib
+*.obj
+*.pdb
+*.sdf
+*.suo
+Debug/
+x64/
