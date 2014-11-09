@@ -196,16 +196,20 @@ namespace tgl
 	private:
 		ID3D11Device*					m_device;
 		ID3D11DeviceContext*			m_deviceContext;
-
+		IDXGISwapChain*					m_swapChain;
+		ID3D11RenderTargetView*			m_backBufferRenderTarget;
+		bool							m_initialized;
 	public:
 		 Device();
 		~Device();
 
-		void							Initialize				(int width, int height);
+		void							Initialize				(HWND wnd, UINT width, UINT height);
 		void							Terminate				();
 
-		Command&						CommandContext			();
-		void							PresentScreen			();
+		bool							IsInitialized			() const;
+
+		Command&						BeginFrame				();
+		void							EndFrame				();
 
 		Buffer*							CreateVertexBuffer		(UINT stride, UINT bufferSize, const uint8_t* img=nullptr, UINT usage=D3D11_USAGE_DEFAULT);
 		Buffer*							CreateIndexBuffer		(UINT stride, UINT bufferSize, const uint8_t* img=nullptr, UINT usage=D3D11_USAGE_DEFAULT);
@@ -216,6 +220,11 @@ namespace tgl
 
 		Texture*						CreateTexture2D			(int w, int h, const uint8_t* img);
 		Texture*						CreateTextureFromFile	(const WCHAR* texFileName);
+
+	private:
+		// ÉRÉsÅ[ã÷é~. 
+		Device							(const Device& other);
+		void operator =					(const Device& other);
 
 	}; // class Device 
 
