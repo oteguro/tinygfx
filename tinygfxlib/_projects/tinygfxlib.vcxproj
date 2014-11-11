@@ -130,10 +130,12 @@
   <ItemGroup>
     <ClCompile Include="..\DirectXTex\DDSTextureLoader\DDSTextureLoader.cpp" />
     <ClCompile Include="..\tinygfxlib.cpp" />
+    <ClCompile Include="..\win.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\DirectXTex\DDSTextureLoader\DDSTextureLoader.h" />
     <ClInclude Include="..\tinygfxlib.h" />
+    <ClInclude Include="..\win.h" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\readme.txt" />
