@@ -4,5 +4,6 @@
 *.pdb
 *.sdf
 *.suo
+*.opensdf
 Debug/
 x64/
